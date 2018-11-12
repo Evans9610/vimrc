@@ -149,7 +149,9 @@ let g:go_fmt_command = "goimports"
 let g:ale_linters = {
 \   'javascript': ['jshint'],
 \   'python': ['flake8'],
-\   'go': ['go', 'golint', 'errcheck']
+\   'go': ['go', 'golint', 'errcheck'],
+\   'c': ['gcc'],
+\   'cpp': ['cppcheck']
 \}
 
 nmap <silent> <leader>a <Plug>(ale_next_wrap)
@@ -160,6 +162,11 @@ let g:ale_set_highlights = 0
 " Only run linting when saving the file
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
+
+let g:ale_lint_on_insert_leave = 1
+let g:ale_cpp_parse_makefile = 1
+let g:ale_cpp_cppcheck_options = '--enable=all -Iinclude'
+let g:ale_cpp_cppcheck_autoinclude_source_dir = 1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

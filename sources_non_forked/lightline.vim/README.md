@@ -31,10 +31,6 @@ https://github.com/itchyny/lightline.vim
 
 ![lightline.vim - seoul256](https://raw.githubusercontent.com/wiki/itchyny/lightline.vim/image/seoul256.png)
 
-### Dracula
-
-![lightline.vim - Dracula](https://raw.githubusercontent.com/wiki/itchyny/lightline.vim/image/Dracula.png)
-
 ### one
 
 ![lightline.vim - one](https://raw.githubusercontent.com/wiki/itchyny/lightline.vim/image/one.png)
@@ -43,7 +39,7 @@ https://github.com/itchyny/lightline.vim
 
 ![lightline.vim - landscape](https://raw.githubusercontent.com/wiki/itchyny/lightline.vim/image/landscape.png)
 
-landscape is my colorscheme, which is a high-contrast cui-supported colorscheme, available at https://github.com/itchyny/landscape.vim
+landscape is my colorscheme, which is a high-contrast cterm-supported colorscheme, available at https://github.com/itchyny/landscape.vim
 
 ## Why yet another clone of powerline?
 + [vim-powerline](https://github.com/Lokaltog/vim-powerline) is a nice plugin, but deprecated.
@@ -56,10 +52,16 @@ landscape is my colorscheme, which is a high-contrast cui-supported colorscheme,
 + Orthogonality. The plugin does not rely on the implementation of other plugins. Such plugin crossing settings should be configured by users.
 
 ## Installation
+### [Vim packages](http://vimhelp.appspot.com/repeat.txt.html#packages) (since Vim 7.4.1528)
+
+        git clone https://github.com/itchyny/lightline.vim ~/.vim/pack/plugins/start/lightline
+
 ### [Pathogen](https://github.com/tpope/vim-pathogen)
 1. Install with the following command.
 
         git clone https://github.com/itchyny/lightline.vim ~/.vim/bundle/lightline.vim
+
+2. Generate help tags with `:Helptags`.
 
 ### [Vundle](https://github.com/VundleVim/Vundle.vim)
 1. Add the following configuration to your `.vimrc`.
@@ -96,7 +98,7 @@ add the following configuration to your `.vimrc`.
 set laststatus=2
 ```
 
-If the statusline does not be coloured like
+If the statusline is not coloured like
 ![lightline.vim - tutorial](https://raw.githubusercontent.com/wiki/itchyny/lightline.vim/image/tutorial/20.png)
 
 then modify `TERM` in your shell configuration (`.zshrc` for example)

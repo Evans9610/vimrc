@@ -117,6 +117,9 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep --smart-case'
 endif
 
+"Use this option to highlight the searched term.
+let g:ackhighlight = 1
+
 " When you press gv you Ack after the selected text
 vnoremap <silent> gv :call VisualSelection('gv', '')<CR>
 
@@ -138,6 +141,7 @@ vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
 "   <leader>p
 "
 map <leader>cc :botright cope<cr>
+map <leader>ccl :ccl<cr>
 map <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
 map <leader>n :cn<cr>
 map <leader>p :cp<cr>
